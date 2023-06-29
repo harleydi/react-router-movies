@@ -15,7 +15,7 @@ const MovieDetails = () => {
     // }
     // getData()
 
-  }, [id ])
+  }, [id, movies])
 
   
   
