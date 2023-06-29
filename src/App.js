@@ -68,7 +68,7 @@ function App() {
   console.log(movies)
   return (
     <div className="App">
-      <Outlet context={{movies}} />
+      <Outlet context={{ movies, setMovies }} />
     </div>
   );
 }
