@@ -3,11 +3,45 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Home from './Components/Home';
+import CreateMovie from './Components/CreateMovie.js'
+import MovieDetails from './Components/MovieDetails';
+import EditMovie from './Components/EditMovie';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      {
+        index: true,
+        element: <Home />
+      },
+      {
+        path: "/movie/:id/details",
+        element: <MovieDetails />
+      },
+      {
+        path: "/movies/create",
+        element: <CreateMovie />
+      },
+      {
+        path: "/movies/:id/edit",
+        element: <EditMovie />
+      }
+    ]
+  },
+  {
+    path: "home",
+    element: <Home />
+  }
+])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
