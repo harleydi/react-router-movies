@@ -3,6 +3,7 @@ import './App.css';
 import { v4 as uuid } from 'uuid'
 import { Outlet } from 'react-router-dom';
 import { useState } from 'react';
+import Sidebar from './Components/Sidebar';
 
 
 function App() {
@@ -64,11 +65,14 @@ function App() {
         "plot": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency."
     }
 ])
+  
+
 
   // console.log(movies)
   return (
     <div className="App">
-      <Outlet context={{ movies, setMovies }} />
+      <Sidebar />
+      <Outlet context={{ movies, setMovies}} />
     </div>
   );
 }

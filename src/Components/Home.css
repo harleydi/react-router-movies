@@ -1,0 +1,61 @@
+h1, body {
+    margin: 0;
+}
+
+.home {
+    background: #11141E;
+    height: 100vh;
+    /* width: 70vw; */
+    overflow: scroll;
+}
+
+.home-h1 {
+    padding: 20px 0;
+    color: #92C5FD;
+}
+
+.movie-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                 MOVIE CARD                                 */
+/* -------------------------------------------------------------------------- */
+
+.card {
+    border: 2px solid black;
+    width: 16rem;
+    /* height: 22rem; */
+    color: white;
+}
+
+.card-image {
+    width: 100%;
+}
+
+.info {
+    background: rgb(107, 114, 128, .1);
+}
+
+.rating-year {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+    margin: 0;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: larger;
+    padding-bottom: 10px;
+}
+
+.icon {
+    background: transparent;
+}
